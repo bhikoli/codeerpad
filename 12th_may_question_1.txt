@@ -1,0 +1,42 @@
+import java.io.*;
+import java.util.*;
+import java.util.Map;
+import java.util.HashMap;
+
+/*
+ * To execute Java, please define "static void main" on a class
+ * named Solution.
+ *
+ * If you need more classes, simply define them inline.
+ */
+
+class Solution {
+  public static void main(String[] args) {
+    String str = "aabccd";
+  
+    // strings.add("Welcome to CoderPad.");
+    // strings.add("This pad is running Java " + Runtime.version().feature());
+    Map<Character, Integer> bas_map= new HashMap<Character, Integer>();
+    char[] chArray= str.toCharArray();
+    for(char ch:chArray)
+    {
+        if(bas_map.containsKey(ch))
+        {
+          bas_map.put(ch, bas_map.get(ch) + 1);  
+          
+        }
+        else 
+        {  
+                bas_map.put(ch, 1);  
+        }  
+    }
+    Set<Character> keys = bas_map.keySet();  
+        for (Character ch : keys) {  
+            
+                System.out.print(ch + " = " + bas_map.get(ch)+",");  
+           
+        }  
+    
+  }
+}
+	
