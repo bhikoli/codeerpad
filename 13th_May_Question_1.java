@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.*;  
 import java.util.Map.*;
 
-public class FindSuccessIpCount {  
+public class FindIpCount {  
     
 	public static void main(String[] args) 
 	{ 
@@ -29,9 +29,9 @@ public class FindSuccessIpCount {
         }
     
         int maxValueInMap = Collections.max(countMap.values());
-        for (Entry<String, Integer> entry : countMap.entrySet()) {  // Itrate through hashmap
+        for (Entry<String, Integer> entry : countMap.entrySet()) {  
             if (entry.getValue()==maxValueInMap) {
-               System.out.println("IP address which appeared most of the times is :  "+entry.getKey());     // Print the key with max value
+               System.out.println("IP address which appeared most of the times is :  "+entry.getKey());    
                System.out.print("count: "+maxValueInMap);
             }
         }
