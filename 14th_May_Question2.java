@@ -12,8 +12,7 @@ import java.util.stream.IntStream;
 class Solution {
   public static void main(String[] args) {
     int[]  arr1 = new int[]{1, 3, 4, 5};
-    int[]  arr2 = new int[]{2, 4, 6, 8};
-    ArrayList<Integer> array_list = new ArrayList<Integer>();
+    int[]  arr2 = new int[]{2, 4, 6, 8}; 
     ArrayList<Integer> 
       list1 =   IntStream.of(arr1).boxed().collect(Collectors.toCollection(ArrayList::new));
     ArrayList<Integer> list2 = IntStream.of(arr2)
